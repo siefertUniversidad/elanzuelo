@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>El Anzuelo • Boletas</title>
+  <link rel="stylesheet" href="estilos/global.css" />
+  <link rel="stylesheet" href="estilos/boletas.css" />
+</head>
+<body>
+  <header class="encabezado">
+    <h1>El Anzuelo</h1>
+    <nav class="pestanias">
+      <a href="index.html">Venta</a>
+      <a href="productos.html">Productos</a>
+      <a href="boletas.html" class="activa">Boletas</a>
+    </nav>
+  </header>
+
+  <main class="contenido grid2c">
+    <section class="lista">
+      <h2>Boletas</h2>
+      <table class="tabla" id="tabla-boletas"></table>
+      <nav class="paginador">
+        <button id="anterior">Anterior</button>
+        <span id="pagina"></span>
+        <button id="siguiente">Siguiente</button>
+      </nav>
+    </section>
+    <section class="detalle" id="detalle" hidden>
+      <h2>Detalle</h2>
+      <div class="tarjeta" id="tarjeta-detalle"></div>
+    </section>
+  </main>
+
+  <footer class="pie">Programación Back End • INACAP 2025</footer>
+
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+  <script src="scripts/boletas.js"></script>
+</body>
+</html>

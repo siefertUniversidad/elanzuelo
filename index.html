@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>El Anzuelo • Venta</title>
+  <link rel="stylesheet" href="estilos/global.css" />
+  <link rel="stylesheet" href="estilos/venta.css" />
+</head>
+<body>
+  <header class="encabezado">
+    <h1>El Anzuelo</h1>
+    <nav class="pestanias">
+      <a href="index.html" class="activa">Venta</a>
+      <a href="productos.html">Productos</a>
+      <a href="boletas.html">Boletas</a>
+    </nav>
+  </header>
+
+  <main class="contenido">
+    <section class="buscador">
+      <input id="buscar" type="search" placeholder="Buscar producto" aria-label="Buscar producto" autocomplete="off" />
+      <select id="filtro-categoria" aria-label="Categoría"></select>
+    </section>
+
+    <section class="catalogo" id="catalogo" aria-live="polite"></section>
+
+    <section class="venta">
+      <h2>Registro de venta</h2>
+      <table class="tabla" id="tabla-lineas">
+        <thead>
+          <tr><th>Producto</th><th>Precio</th><th style="width:100px">Cant.</th><th>Subtotal</th><th></th></tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr><td colspan="3">Total</td><td id="total">$0</td><td></td></tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section class="checkout">
+      <h2>Cliente</h2>
+      <form id="form-checkout">
+        <div class="grid2">
+          <label for="rut">RUT
+            <input name="rut" id="rut" placeholder="12.345.678-5" />
+          </label>
+          <label for="nombre">Nombre
+            <input name="nombre" id="nombre" placeholder="Nombre completo" />
+          </label>
+          <label for="email">Email
+            <input name="email" id="email" type="email" placeholder="correo@dominio.cl" />
+          </label>
+          <label for="telefono">Teléfono
+            <input name="telefono" id="telefono" placeholder="9XXXXXXXX" inputmode="tel" />
+          </label>
+          <label for="direccion">Dirección
+            <input name="direccion" id="direccion" placeholder="Calle 123" />
+          </label>
+          <label for="vendedor_nombre">Vendedor
+            <input name="vendedor_nombre" id="vendedor_nombre" placeholder="Tu nombre" />
+          </label>
+        </div>
+        <button class="principal" type="submit">Confirmar venta</button>
+      </form>
+
+      <article class="boleta" id="boleta" hidden>
+        <h3>Boleta generada</h3>
+        <p><strong>N°:</strong> <span id="b-id"></span></p>
+        <p><strong>Total:</strong> <span id="b-total"></span></p>
+        <p><strong>Fecha:</strong> <span id="b-fecha"></span></p>
+        <a class="enlace" id="b-ver" href="#">Ver en Boletas</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="pie">Programación Back End • INACAP 2025</footer>
+
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+  <script src="scripts/ventas.js"></script>
+  <script src="scripts/validaciones.js"></script>
+</body>
+</html>

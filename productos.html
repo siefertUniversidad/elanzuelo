@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>El Anzuelo • Productos</title>
+  <link rel="stylesheet" href="estilos/global.css" />
+  <link rel="stylesheet" href="estilos/productos.css" />
+</head>
+<body>
+  <header class="encabezado">
+    <h1>El Anzuelo</h1>
+    <nav class="pestanias">
+      <a href="index.html">Venta</a>
+      <a href="productos.html" class="activa">Productos</a>
+      <a href="boletas.html">Boletas</a>
+    </nav>
+  </header>
+
+  <main class="contenido">
+    <section>
+      <h2>Crear / Editar producto</h2>
+      <form id="form-producto" novalidate>
+        <input type="hidden" name="id_producto" />
+        <div class="grid3">
+          <label>Nombre
+            <input name="nombre" required minlength="2" maxlength="120" placeholder="Nombre del producto" />
+          </label>
+          <label>Categoría
+            <select name="id_categoria" id="sel-categoria" required></select>
+          </label>
+          <label>Precio
+            <input name="precio" type="number" step="0.01" min="0" required placeholder="Precio" />
+          </label>
+          <label>Stock
+            <input name="stock" type="number" min="0" required placeholder="Stock" />
+          </label>
+          <label>Estado
+            <select name="estado" required>
+              <option value="1">Activo</option>
+              <option value="0">Inactivo</option>
+            </select>
+          </label>
+        </div>
+        <div class="acciones">
+          <button type="button" id="btn-cancelar">Cancelar</button>
+          <button class="principal" type="submit">Guardar</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2>Listado</h2>
+      <input id="buscar-lista" type="search" placeholder="Buscar…" />
+      <table class="tabla" id="tabla-productos"></table>
+    </section>
+  </main>
+
+  <footer class="pie">Programación Back End • INACAP 2025</footer>
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+  <script src="scripts/productos.js"></script>
+</body>
+</html>

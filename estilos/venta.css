@@ -1,0 +1,42 @@
+.buscador {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0.5rem 0 1rem;
+}
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+.catalogo .card {
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 0.75rem;
+  background: #fff;
+}
+.catalogo .card h3 {
+  margin: 0.2rem 0;
+}
+.venta {
+  margin-top: 1rem;
+}
+.checkout {
+  margin-top: 1rem;
+}
+.boleta {
+  margin-top: 1rem;
+}
+#tabla-lineas td:nth-child(2),
+#tabla-lineas td:nth-child(4),
+#tabla-lineas th:nth-child(2),
+#tabla-lineas th:nth-child(4) {
+  text-align: right;
+}
+#tabla-lineas td:nth-child(3) {
+  width: 100px;
+}
+#tabla-lineas input[type="number"] {
+  width: 100%;
+}

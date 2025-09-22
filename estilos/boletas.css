@@ -1,0 +1,9 @@
+#tarjeta-detalle p {
+  margin: 0.25rem 0;
+}
+#tabla-boletas thead th {
+  position: sticky;
+  top: 0;
+  background: #f3f6fa;
+  z-index: 1;
+}
